@@ -1,4 +1,5 @@
 import React from "react";
+import Book from "./Book";
 
 const Turn = ({ author }) => {
   return (
@@ -8,7 +9,7 @@ const Turn = ({ author }) => {
       </div>
       <div className="col-6">
         {author.books.map(title => (
-          <p>{title}</p>
+          <Book title={title} key={title} />
         ))}
       </div>
     </div>
